@@ -33,7 +33,7 @@ public class AttackRadius : MonoBehaviour
         IDamageable damageable = other.GetComponent<IDamageable>();
         if (damageable != null)
         {
-            Debug.Log("Idamageable added");
+           // Debug.Log("Idamageable added");
             damageables.Add(damageable);
             if (attackCoroutine == null)
             {
@@ -48,7 +48,7 @@ public class AttackRadius : MonoBehaviour
         IDamageable damageable = other.GetComponent<IDamageable>();
         if (damageable != null)
         {
-            Debug.Log("Idamageable removed");
+           // Debug.Log("Idamageable removed");
             damageables.Remove(damageable);
             if (damageables.Count == 0)
             {
@@ -73,7 +73,7 @@ public class AttackRadius : MonoBehaviour
                 {
                     closestDistance = distanceToTarget;
                     closestDamageable = damageables[i];
-                    Debug.Log("Attack");
+                   
                 }
             }
 
