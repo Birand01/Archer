@@ -387,6 +387,13 @@
 "Assets/Art/ExplosiveLLC/Warrior FREE/Code/WarriorInputSystemController.cs"
 "Assets/Art/ExplosiveLLC/Warrior FREE/Code/WarriorMovementController.cs"
 "Assets/Art/ExplosiveLLC/Warrior FREE/Code/WarriorTiming.cs"
+"Assets/Scripts/Base/HealthBase.cs"
+"Assets/Scripts/Base/InteractionBase.cs"
+"Assets/Scripts/Enemy/EnemyHealth/EnemyHealth.cs"
+"Assets/Scripts/Interfaces/IDamageable.cs"
+"Assets/Scripts/Player/AttackRadius.cs"
+"Assets/Scripts/Player/AttackRadiusInteraction.cs"
+"Assets/Scripts/Player/PlayerRotation.cs"
 -langversion:9.0
 
 /deterministic
