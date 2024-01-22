@@ -3693,7 +3693,6 @@ GameObject:
   - component: {fileID: 3336284}
   - component: {fileID: 2338500}
   - component: {fileID: 356192099}
-  - component: {fileID: 356192096}
   m_Layer: 9
   m_Name: Stage
   m_TagString: Untagged
@@ -3780,19 +3779,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300274, guid: d826937e74d22874882bc40d136547ce, type: 3}
---- !u!114 &356192096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a5a6afaf80069348aa068ae586fb3ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drawMeshTreeOnStart: 0
 --- !u!1 &188380
 GameObject:
   m_ObjectHideFlags: 0
