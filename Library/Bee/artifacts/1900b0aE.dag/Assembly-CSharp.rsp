@@ -402,6 +402,7 @@
 "Assets/Scripts/Interfaces/IDamageable.cs"
 "Assets/Scripts/Interfaces/IHealable.cs"
 "Assets/Scripts/Managers/EnemySpawnManager/EnemySpawnManager.cs"
+"Assets/Scripts/Managers/Score/ScoreManager.cs"
 "Assets/Scripts/Player/AttackRadius.cs"
 "Assets/Scripts/Player/AttackRadiusInteraction.cs"
 "Assets/Scripts/Player/DamageZoneInteraction.cs"

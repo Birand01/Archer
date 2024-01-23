@@ -10,7 +10,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     [SerializeField] private Image healthBar;
     [SerializeField] internal float _health;
     public static event Action<Collider> OnRemoveEnemyFromDamageableList;
-  
+    public static event Action<int> OnScoreCounterEvent;
     public float Health
     {
         get { return _health; }
@@ -33,6 +33,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
         if (healthBar.fillAmount <= 0)
         {
             Health = 0;
+            OnScoreCounterEvent?.Invoke(1);
             Debug.Log("DEAD"); 
             ObjectDeadEvent();
         }

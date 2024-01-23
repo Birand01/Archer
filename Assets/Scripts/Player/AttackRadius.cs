@@ -12,10 +12,16 @@ public class AttackRadius : MonoBehaviour
 
     public static event Action<IDamageable> OnAttackEvent;
     public static event Action OnAttackAnimationEvent;
+    private float radius;
+    private void OnValidate()
+    {    
+      
+    }
     private void Awake()
     {
         damageables = new List<IDamageable>();
-
+        radius = this.gameObject.GetComponent<SphereCollider>().radius;
+        minDistanceToAttack = 3 * radius;
     }
     private void OnEnable()
     {
