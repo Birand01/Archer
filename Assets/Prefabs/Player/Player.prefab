@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 46880476343704655}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.01, z: 0}
-  m_LocalScale: {x: 2.3719728, y: 2.3719728, z: 2.3719728}
+  m_LocalScale: {x: 2.8961787, y: 2.8961787, z: 2.8961787}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8905973563609687963}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f1b16740e4c3945bfe8bc1093b806b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDistanceToAttack: 6
+  minDistanceToAttack: 5.48
 --- !u!114 &7506135663855769017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3063,3 +3063,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c3972562e865e5d4c84dff2ee012a91d, type: 3}
   m_PrefabInstance: {fileID: 6725565492149205885}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6725565492149108189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: c3972562e865e5d4c84dff2ee012a91d, type: 3}
+  m_PrefabInstance: {fileID: 6725565492149205885}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1857301712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6725565492149108189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e26db0c3949b945bd8f0afd6db9811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootPositions:
+  - {fileID: 6725565492149068285}
+  arrowPrefab: {fileID: 2498105451938183565, guid: b4dc858bc24ce8644a9167fb0edfcd61, type: 3}
+  reloadDelay: 1

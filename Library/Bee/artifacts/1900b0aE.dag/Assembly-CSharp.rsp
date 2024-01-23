@@ -393,6 +393,8 @@
 "Assets/Scripts/AI/States/ChaseState.cs"
 "Assets/Scripts/AI/States/DeadState.cs"
 "Assets/Scripts/AI/States/IdleState.cs"
+"Assets/Scripts/Arrow/Arrow.cs"
+"Assets/Scripts/Arrow/ArrowInteraction.cs"
 "Assets/Scripts/Base/HealthBase.cs"
 "Assets/Scripts/Base/InteractionBase.cs"
 "Assets/Scripts/Enemy/Enemy.cs"
@@ -402,6 +404,7 @@
 "Assets/Scripts/Player/AttackRadius.cs"
 "Assets/Scripts/Player/AttackRadiusInteraction.cs"
 "Assets/Scripts/Player/PlayerRotation.cs"
+"Assets/Scripts/Player/PlayerShoot.cs"
 "Assets/Scripts/SO/HealthbarSO/HealthBarSO.cs"
 "Assets/Scripts/UI/EnemyHealthBar/EnemyHealthbarConfig.cs"
 -langversion:9.0
