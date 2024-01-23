@@ -58,12 +58,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Base\InteractionBase.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\Demo Elements\Code\GUIControls.cs" />
+    <Compile Include="Assets\Scripts\Arrow\ArrowInteraction.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\Warrior FREE\Code\AnimatorParentMove.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperStateMachine.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\Warrior FREE\Code\WarriorInputSystemController.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth\EnemyHealth.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\Warrior FREE\Code\WarriorMovementController.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\Scripts\SimpleStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Arrow\Arrow.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Math3d.cs" />
     <Compile Include="Assets\Scripts\AI\States\AttackState.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperMath.cs" />
@@ -88,10 +90,11 @@
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BSPTree.cs" />
     <Compile Include="Assets\Scripts\AI\States\IdleState.cs" />
     <Compile Include="Assets\Scripts\Base\HealthBase.cs" />
-    <Compile Include="Assets\Scripts\UI\EnemyHealthBar\EnemyHealthbarConfig.cs" />
+    <Compile Include="Assets\Scripts\UI\EnemyHealthBar\HealthbarConfig.cs" />
     <Compile Include="Assets\Scripts\AI\StateManager.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCollider.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\Warrior FREE\Code\WarriorData.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerShoot.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\Scripts\PlayerCamera.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\DebugDraw.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BruteForceMesh.cs" />
@@ -99,9 +102,10 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCharacterController.cs" />
     <Compile Include="Assets\Scripts\Player\AttackRadiusInteraction.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerShoot.cs" />
-    <Compile Include="Assets\Scripts\Arrow\Arrow.cs" />
-    <Compile Include="Assets\Scripts\Arrow\ArrowInteraction.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAnimation.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IHealable.cs" />
+    <Compile Include="Assets\Scripts\Player\DamageZoneInteraction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

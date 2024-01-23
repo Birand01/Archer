@@ -6,7 +6,7 @@ public class DeadState : State
 {
     public override State RunCurrentState()
     {
-        Debug.Log("DEAD");
+        this.gameObject.SetActive(false);
         return this;
     }
 

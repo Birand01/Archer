@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackState: {fileID: 19580823901467287}
+  deadState: {fileID: 1769329104885411283}
 --- !u!1 &961365975
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadState: {fileID: 1769329104885411283}
-  winState: {fileID: 833729712486894804}
+  idleState: {fileID: 833729712486894804}
 --- !u!1 &2140319042
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +215,7 @@ Transform:
   - {fileID: 1564031238}
   - {fileID: 961365976}
   m_Father: {fileID: 8268220135028559113}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &46759209948766833
 GameObject:
@@ -501,6 +502,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 975948194506742628}
+  - {fileID: 4611586521288049746}
   m_Father: {fileID: 3411567622631306992}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -944,7 +946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1451,14 +1453,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5176565043584580065}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.222, z: 0}
+  m_LocalRotation: {x: 3.0203267e-14, y: -7.10579e-15, z: 0.000000069935254, w: 1}
+  m_LocalPosition: {x: 0, y: 0.36166793, z: 0.06263311}
   m_LocalScale: {x: 0.21530753, y: 0.21530753, z: 0.21530753}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3882836377155072486}
-  m_Father: {fileID: 8268220135028559113}
-  m_RootOrder: 2
+  m_Father: {fileID: 2653196947285417866}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1560484994
 MonoBehaviour:
@@ -2644,7 +2646,6 @@ Transform:
   m_Children:
   - {fileID: 4534786911009664413}
   - {fileID: 8924929164945427460}
-  - {fileID: 4611586521288049746}
   - {fileID: 2140319043}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2717,8 +2718,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 099a2890a52192741889d0de0158d932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  _health: 0
+  healthBar: {fileID: 5264836543333944997}
+  _health: 1
 --- !u!114 &886302155922814845
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -400,13 +400,17 @@
 "Assets/Scripts/Enemy/Enemy.cs"
 "Assets/Scripts/Enemy/EnemyHealth/EnemyHealth.cs"
 "Assets/Scripts/Interfaces/IDamageable.cs"
+"Assets/Scripts/Interfaces/IHealable.cs"
 "Assets/Scripts/Managers/EnemySpawnManager/EnemySpawnManager.cs"
 "Assets/Scripts/Player/AttackRadius.cs"
 "Assets/Scripts/Player/AttackRadiusInteraction.cs"
+"Assets/Scripts/Player/DamageZoneInteraction.cs"
+"Assets/Scripts/Player/PlayerAnimation.cs"
+"Assets/Scripts/Player/PlayerHealth.cs"
 "Assets/Scripts/Player/PlayerRotation.cs"
 "Assets/Scripts/Player/PlayerShoot.cs"
 "Assets/Scripts/SO/HealthbarSO/HealthBarSO.cs"
-"Assets/Scripts/UI/EnemyHealthBar/EnemyHealthbarConfig.cs"
+"Assets/Scripts/UI/EnemyHealthBar/HealthbarConfig.cs"
 -langversion:9.0
 
 /deterministic

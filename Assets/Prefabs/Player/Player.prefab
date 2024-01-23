@@ -2574,9 +2574,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8905973563609687963}
   - component: {fileID: 3280183242293011839}
-  - component: {fileID: 8806166526049959424}
   - component: {fileID: 7399435663121794015}
   - component: {fileID: 2796275682569633736}
+  - component: {fileID: 7837534308331622232}
+  - component: {fileID: 2796275682569633738}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -2626,19 +2627,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!65 &8806166526049959424
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8129999436543294753}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5020208, y: 1.783705, z: 0.4612028}
-  m_Center: {x: -0.0040818155, y: 0.88983166, z: 0.008163601}
 --- !u!54 &7399435663121794015
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2668,6 +2656,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretRotationSpeed: 5
+--- !u!114 &7837534308331622232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8129999436543294753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8683fab04d55984ea52a43537897286, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarSlider: {fileID: 0}
+  healthFillbarImage: {fileID: 0}
+  initialHealthColor: {r: 0.04429555, g: 1, b: 0, a: 1}
+  finalHealthColor: {r: 1, g: 0.03951939, b: 0, a: 1}
+  currentHealthText: {fileID: 0}
+  maxHealthText: {fileID: 0}
+  totalSize: 100
+--- !u!114 &2796275682569633738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8129999436543294753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f5666ec29d454438545dc2bab491c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8249618434371676421
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,7 +2858,9 @@ GameObject:
   m_Component:
   - component: {fileID: 685956219740844895}
   - component: {fileID: 5721682935847507741}
-  m_Layer: 8
+  - component: {fileID: 691868248}
+  - component: {fileID: 691868247}
+  m_Layer: 12
   m_Name: Erika_Archer_Body_Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2981,6 +3002,32 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00031781197, y: -0.20200256, z: -0.059042916}
     m_Extent: {x: 0.7187168, y: 0.95933247, z: 0.24650945}
   m_DirtyAABB: 0
+--- !u!135 &691868248
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9136634130101226427}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.7
+  m_Center: {x: -0.0060001165, y: 0, z: -0.043193307}
+--- !u!114 &691868247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9136634130101226427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee61c5eebd900de47b73267e38426dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  takenDamage: 0.1
 --- !u!1001 &6725565492149205885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3082,5 +3129,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootPositions:
   - {fileID: 6725565492149068285}
-  arrowPrefab: {fileID: 2498105451938183565, guid: b4dc858bc24ce8644a9167fb0edfcd61, type: 3}
+  arrowPrefab: {fileID: 7315903515749474447, guid: 8dbad0dc6585ec642b076fa0395e6e9d, type: 3}
   reloadDelay: 1

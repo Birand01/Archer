@@ -11,6 +11,7 @@ public class AttackRadius : MonoBehaviour
     private Coroutine attackCoroutine;
 
     public static event Action<IDamageable> OnAttackEvent;
+    public static event Action OnAttackAnimationEvent;
     private void Awake()
     {
         damageables = new List<IDamageable>();
@@ -18,6 +19,7 @@ public class AttackRadius : MonoBehaviour
     }
     private void OnEnable()
     {
+        EnemyHealth.OnRemoveEnemyFromDamageableList += RemoveEnemyFromDamageableList;
         AttackRadiusInteraction.OnAddEnemyToDamageableList += AddEnemyToDamageableList;
         AttackRadiusInteraction.OnRemoveEnemyFromDamageableList += RemoveEnemyFromDamageableList;
     }
@@ -25,6 +27,7 @@ public class AttackRadius : MonoBehaviour
     {
         AttackRadiusInteraction.OnAddEnemyToDamageableList -= AddEnemyToDamageableList;
         AttackRadiusInteraction.OnRemoveEnemyFromDamageableList -= RemoveEnemyFromDamageableList;
+        EnemyHealth.OnRemoveEnemyFromDamageableList -= RemoveEnemyFromDamageableList;
 
     }
     private void AddEnemyToDamageableList(Collider other)
@@ -50,6 +53,7 @@ public class AttackRadius : MonoBehaviour
         {
            // Debug.Log("Idamageable removed");
             damageables.Remove(damageable);
+           
             if (damageables.Count == 0)
             {
                 StopCoroutine(attackCoroutine);
@@ -80,8 +84,10 @@ public class AttackRadius : MonoBehaviour
             if (closestDamageable != null)
             {
                 // TO DO: ATTACK EVENTS
+                OnAttackAnimationEvent?.Invoke();
                 OnAttackEvent?.Invoke(closestDamageable);
             }
+           
             closestDamageable = null;
             closestDistance = minDistanceToAttack;
             yield return wait;
