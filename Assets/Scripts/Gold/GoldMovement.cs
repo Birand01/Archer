@@ -16,6 +16,7 @@ public class GoldMovement : MonoBehaviour
     }
     private void OnEnable()
     {
+        StartCoroutine(MoveToPlayer());
         StartCoroutine(Subscribe());
        
     }
@@ -27,9 +28,11 @@ public class GoldMovement : MonoBehaviour
     {
         transform.Rotate(new Vector3(transform.position.x,transform.position.y,rotationSpeed)*Time.deltaTime);
     }
-    private void MoveToPlayer()
+    private IEnumerator MoveToPlayer()
     {
+        yield return new WaitForSeconds(1f);
         transform.DOMove(_player.position,0.5f).SetEase(Ease.OutQuad);
+       
     }
     protected virtual IEnumerator Subscribe()
     {
@@ -38,7 +41,7 @@ public class GoldMovement : MonoBehaviour
         this.UpdateAsObservable().Subscribe(x =>
         {
             RotateGold();
-            MoveToPlayer();
+          
         })
             .AddTo(subscriptions);
     }

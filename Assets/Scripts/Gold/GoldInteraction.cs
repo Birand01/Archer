@@ -1,18 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoldInteraction : MonoBehaviour
+public class GoldInteraction : InteractionBase
 {
-    // Start is called before the first frame update
-    void Start()
+    public static event Action<float> OnIncreaseGoldAmount;
+    protected override void OnTriggerEnterAction(Collider collider)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        OnIncreaseGoldAmount?.Invoke(0.2f);
+        gameObject.SetActive(false);
     }
 }

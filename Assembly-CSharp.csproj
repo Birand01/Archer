@@ -60,6 +60,7 @@
     <Compile Include="Assets\Art\ExplosiveLLC\Demo Elements\Code\GUIControls.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IHealable.cs" />
     <Compile Include="Assets\Scripts\Arrow\ArrowInteraction.cs" />
+    <Compile Include="Assets\Scripts\Managers\Gold\GoldSpawnManager.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\Warrior FREE\Code\AnimatorParentMove.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperStateMachine.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\Warrior FREE\Code\WarriorInputSystemController.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Art\ExplosiveLLC\Warrior FREE\Code\WarriorController.cs" />
     <Compile Include="Assets\Scripts\SO\HealthbarSO\HealthBarSO.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\Scripts\Gravity.cs" />
+    <Compile Include="Assets\Scripts\Gold\GoldMovement.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\Scripts\PlayerMachineDebug.cs" />
     <Compile Include="Assets\Scripts\Managers\Score\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\AI\States\ChaseState.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="Assets\Art\ExplosiveLLC\Demo Elements\Code\CameraController.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCollisionType.cs" />
     <Compile Include="Assets\Scripts\Player\AttackRadius.cs" />
+    <Compile Include="Assets\Scripts\Gold\GoldInteraction.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BSPTree.cs" />
     <Compile Include="Assets\Scripts\AI\States\IdleState.cs" />
     <Compile Include="Assets\Scripts\Base\HealthBase.cs" />
@@ -108,9 +111,7 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCharacterController.cs" />
     <Compile Include="Assets\Scripts\Player\AttackRadiusInteraction.cs" />
-    <Compile Include="Assets\Scripts\Managers\Gold\GoldManager.cs" />
-    <Compile Include="Assets\Scripts\Gold\GoldInteraction.cs" />
-    <Compile Include="Assets\Scripts\Gold\GoldMovement.cs" />
+    <Compile Include="Assets\Scripts\Managers\Gold\GoldCounterManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
