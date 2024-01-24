@@ -18,10 +18,7 @@ public class StateManager : MonoBehaviour
 
         subscriptions.Clear();
     }
-    private void OnStartGameEvent()
-    {
-        
-    }
+   
     protected virtual IEnumerator Subscribe()
     {
         yield return null;

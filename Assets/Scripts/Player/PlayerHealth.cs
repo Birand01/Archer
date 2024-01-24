@@ -16,6 +16,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHealable
     internal float remainingSize;
 
     public static event Action<bool> OnPlayerDeadEvent;
+    public static event Action OnGameOverEvent;
     internal float Health
     {
         get
@@ -62,13 +63,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHealable
         currentHealthText.text = String.Format("{0:0}", Health);
         if (Health <= 0)
         {
-           
+            OnGameOverEvent?.Invoke();
             OnPlayerDeadEvent?.Invoke(true);
-        }
-        else
-        {
-            OnPlayerDeadEvent?.Invoke(false);
-
         }
         SetHealthbarUI();
     }

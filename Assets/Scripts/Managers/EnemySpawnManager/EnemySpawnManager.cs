@@ -12,6 +12,20 @@ public class EnemySpawnManager : MonoBehaviour
     {
         StartCoroutine(SpawnTargetsCoroutine());
     }
+    private void OnEnable()
+    {
+        PlayerHealth.OnGameOverEvent += GameOverEvent;
+    }
+    private void OnDisable()
+    {
+        PlayerHealth.OnGameOverEvent -= GameOverEvent;
+
+    }
+
+    private void GameOverEvent()
+    {
+        willSpawnTargets = false;
+    }
     private IEnumerator SpawnTargetsCoroutine()
     {
         // Wait a little bit after hitting the first target until we spawn the second one

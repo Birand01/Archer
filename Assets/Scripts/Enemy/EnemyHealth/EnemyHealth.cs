@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     [SerializeField] internal float _health;
     public static event Action<Collider> OnRemoveEnemyFromDamageableList;
     public static event Action<int> OnScoreCounterEvent;
+    public static event Action<GameObject> OnGenerateGoldEvent;
     public float Health
     {
         get { return _health; }
@@ -48,6 +49,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
         gameObject.GetComponent<Collider>().enabled = false;    
         yield return new WaitForSeconds(2f);
         this.gameObject.SetActive(false);
+        OnGenerateGoldEvent?.Invoke(gameObject);
 
     }
     

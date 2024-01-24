@@ -6,8 +6,12 @@ public class PlayerAnimation : MonoBehaviour
 {
    private Animator animator;
     private readonly string attackAnimName = "Attack",deadAnimName="Dead";
+    internal bool canShootAnimation=false;
+
+  
     private void Awake()
     {
+       
         animator = GetComponent<Animator>();
     }
     private void OnEnable()
@@ -30,4 +34,6 @@ public class PlayerAnimation : MonoBehaviour
     {
         animator.SetBool(deadAnimName,true);
     }
+
+    
 }
