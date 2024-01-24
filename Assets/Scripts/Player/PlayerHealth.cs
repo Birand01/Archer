@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHealable
     [SerializeField] private TMP_Text currentHealthText, maxHealthText;
     [SerializeField] internal float totalSize;
     internal float remainingSize;
+
+    public static event Action<bool> OnPlayerDeadEvent;
     internal float Health
     {
         get
@@ -60,7 +62,13 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHealable
         currentHealthText.text = String.Format("{0:0}", Health);
         if (Health <= 0)
         {
-            Debug.Log("DEAD");
+           
+            OnPlayerDeadEvent?.Invoke(true);
+        }
+        else
+        {
+            OnPlayerDeadEvent?.Invoke(false);
+
         }
         SetHealthbarUI();
     }

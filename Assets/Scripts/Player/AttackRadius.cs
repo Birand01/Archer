@@ -25,6 +25,7 @@ public class AttackRadius : MonoBehaviour
     }
     private void OnEnable()
     {
+        PlayerHealth.OnPlayerDeadEvent += OnDeadEvent;
         EnemyHealth.OnRemoveEnemyFromDamageableList += RemoveEnemyFromDamageableList;
         AttackRadiusInteraction.OnAddEnemyToDamageableList += AddEnemyToDamageableList;
         AttackRadiusInteraction.OnRemoveEnemyFromDamageableList += RemoveEnemyFromDamageableList;
@@ -34,6 +35,7 @@ public class AttackRadius : MonoBehaviour
         AttackRadiusInteraction.OnAddEnemyToDamageableList -= AddEnemyToDamageableList;
         AttackRadiusInteraction.OnRemoveEnemyFromDamageableList -= RemoveEnemyFromDamageableList;
         EnemyHealth.OnRemoveEnemyFromDamageableList -= RemoveEnemyFromDamageableList;
+        PlayerHealth.OnPlayerDeadEvent -= OnDeadEvent;
 
     }
     private void AddEnemyToDamageableList(Collider other)
@@ -67,6 +69,16 @@ public class AttackRadius : MonoBehaviour
             }
         }
     }
+    private void OnDeadEvent(bool state)
+    {
+        if (state)
+        {
+            gameObject.GetComponent<Collider>().isTrigger = false;
+           
+        }
+        
+    }
+    
     private IEnumerator Attack()
     {
         WaitForSeconds wait = new WaitForSeconds(attackDelay);

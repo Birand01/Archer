@@ -6,6 +6,8 @@ public class DeadState : State
 {
     public override State RunCurrentState()
     {
+        agent.isStopped = true;
+        agent.speed = 0;
         this.gameObject.SetActive(false);
         return this;
     }

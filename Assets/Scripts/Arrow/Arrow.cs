@@ -33,7 +33,8 @@ public class Arrow : MonoBehaviour
     internal void InitializeArrow(IDamageable damageable)
     {
         startPosition = transform.position;
-        Vector3 direction = (damageable.GetTransform().position - startPosition).normalized;      
+        Vector3 direction = (damageable.GetTransform().position - startPosition).normalized; 
+        direction.y = 0f;
         rb.velocity = direction * arrowSpeed;
     }
     internal void Aim(IDamageable damageable)
