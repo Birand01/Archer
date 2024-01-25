@@ -7,6 +7,7 @@ public class Arrow : MonoBehaviour
 {
     private Vector3 startPosition, finalLookDirection;
     private float conquaredDistance;
+    internal float arrowDamage;
     private Rigidbody rb;
     [SerializeField] private float maxDistance,arrowSpeed;
 

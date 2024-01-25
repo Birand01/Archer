@@ -400,6 +400,7 @@
 "Assets/Scripts/Base/InteractionBase.cs"
 "Assets/Scripts/DI/Injector.cs"
 "Assets/Scripts/Enemy/Enemy.cs"
+"Assets/Scripts/Enemy/EnemyConfiguration.cs"
 "Assets/Scripts/Enemy/EnemyHealth/EnemyHealth.cs"
 "Assets/Scripts/Gold/GoldInteraction.cs"
 "Assets/Scripts/Gold/GoldMovement.cs"
@@ -416,7 +417,7 @@
 "Assets/Scripts/Player/PlayerHealth.cs"
 "Assets/Scripts/Player/PlayerRotation.cs"
 "Assets/Scripts/Player/PlayerShoot.cs"
-"Assets/Scripts/SO/HealthbarSO/HealthBarSO.cs"
+"Assets/Scripts/SO/Enemy/EnemySO.cs"
 "Assets/Scripts/UI/EnemyHealthBar/HealthbarConfig.cs"
 -langversion:9.0
 

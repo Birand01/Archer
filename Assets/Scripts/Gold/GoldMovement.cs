@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class GoldMovement : MonoBehaviour
 {
+   
     [SerializeField] private float rotationSpeed;
     protected CompositeDisposable subscriptions = new CompositeDisposable();
     private Transform _player;
@@ -16,22 +17,27 @@ public class GoldMovement : MonoBehaviour
     }
     private void OnEnable()
     {
+        
         StartCoroutine(MoveToPlayer());
         StartCoroutine(Subscribe());
        
     }
     private void OnDisable()
     {
+      
+
         subscriptions.Clear();
     }
     private void RotateGold()
     {
         transform.Rotate(new Vector3(transform.position.x,transform.position.y,rotationSpeed)*Time.deltaTime);
     }
+
+   
     private IEnumerator MoveToPlayer()
     {
         yield return new WaitForSeconds(1f);
-        transform.DOMove(_player.position,0.5f).SetEase(Ease.OutQuad);
+        transform.DOMove(_player.position,1f).SetEase(Ease.OutQuad);
        
     }
     protected virtual IEnumerator Subscribe()

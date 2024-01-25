@@ -11,7 +11,7 @@ public class ArrowInteraction : InteractionBase
         IDamageable damageable=collider.GetComponent<IDamageable>();
         if (damageable != null)
         {
-            damageable.TakeDamage(arrowDamage);
+            damageable.TakeDamage(collider.gameObject.GetComponent<EnemyHealth>().takenDamage);
         }
        
     }

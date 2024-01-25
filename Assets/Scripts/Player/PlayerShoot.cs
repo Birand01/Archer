@@ -62,7 +62,7 @@ public class PlayerShoot : MonoBehaviour
             foreach (var barrel in shootPositions)
             {
                 GameObject arrow = Instantiate(arrowPrefab);
-                arrow.transform.position =new Vector3(barrel.position.x, barrel.position.y+0.5f, barrel.position.z);
+                arrow.transform.position =new Vector3(barrel.position.x, barrel.position.y+0.3f, barrel.position.z);
                 arrow.transform.rotation = Quaternion.LookRotation(damageable.GetTransform().position);
                 //arrow.GetComponent<Arrow>().Aim(damageable);
                 arrow.GetComponent<Arrow>().InitializeArrow(damageable);

@@ -2672,6 +2672,7 @@ GameObject:
   - component: {fileID: 4594899780206680066}
   - component: {fileID: 1831851531646366213}
   - component: {fileID: 886302155922814845}
+  - component: {fileID: 996507462}
   m_Layer: 9
   m_Name: Zombie
   m_TagString: Untagged
@@ -2765,8 +2766,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 099a2890a52192741889d0de0158d932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goldPrefab: {fileID: 6714582358436235504, guid: 97944418b036c3241aca4aa6ba1b29ce, type: 3}
   healthBar: {fileID: 5264836543333944997}
   _health: 1
+  takenDamage: 1
 --- !u!114 &886302155922814845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2780,6 +2783,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 833729712486894804}
+--- !u!114 &996507462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8788016883609393075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70294937877a7e4ca8afadc03464832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySO: {fileID: 11400000, guid: 3c5f63b256f43044282bca860fd50657, type: 2}
 --- !u!1 &8804862203767141608
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ public class GoldCounterManager : MonoBehaviour
     private void GoldCounter(float value)
     {
         totalGoldAmount += value;
-        goldCounterText.text = totalGoldAmount.ToString();
+        goldCounterText.text =string.Format("{0}", totalGoldAmount.ToString());
 
     }
 }

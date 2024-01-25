@@ -5,10 +5,10 @@ using Zenject;
 
 public class EnemySpawnManager : MonoBehaviour
 {
-    [Inject] ScoreManager enemySpawnManager;
+    [Inject] ScoreManager scoreManager;
     [SerializeField] private GameObject zombiePrefab;
     internal bool willSpawnTargets=true;
-    private float SpawnInterval => 4f * Mathf.Pow(0.95f, 0.1f*enemySpawnManager.totalScore);
+    private float SpawnInterval => 4f * Mathf.Pow(0.95f, 0.1f*scoreManager.totalScore);
 
     private void Start()
     {
