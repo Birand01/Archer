@@ -398,6 +398,7 @@
 "Assets/Scripts/Arrow/ArrowInteraction.cs"
 "Assets/Scripts/Base/HealthBase.cs"
 "Assets/Scripts/Base/InteractionBase.cs"
+"Assets/Scripts/DI/Injector.cs"
 "Assets/Scripts/Enemy/Enemy.cs"
 "Assets/Scripts/Enemy/EnemyHealth/EnemyHealth.cs"
 "Assets/Scripts/Gold/GoldInteraction.cs"

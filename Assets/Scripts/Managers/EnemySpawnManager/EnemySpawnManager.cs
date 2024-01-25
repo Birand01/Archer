@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class EnemySpawnManager : MonoBehaviour
 {
+    [Inject] ScoreManager enemySpawnManager;
     [SerializeField] private GameObject zombiePrefab;
     internal bool willSpawnTargets=true;
-    private static float SpawnInterval => 4f * Mathf.Pow(0.95f,2 /*ArcheryGame.CurrentScore*/);
+    private float SpawnInterval => 4f * Mathf.Pow(0.95f, 0.1f*enemySpawnManager.totalScore);
 
     private void Start()
     {

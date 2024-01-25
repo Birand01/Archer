@@ -5,12 +5,8 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    private TMP_Text scoreText;
+    [SerializeField] private TMP_Text scoreText;
     [SerializeField] internal int totalScore = 0;
-    private void Awake()
-    {
-        scoreText = GetComponent<TMP_Text>();
-    }
     private void OnEnable()
     {
         EnemyHealth.OnScoreCounterEvent += ScoreCounter;
