@@ -7,9 +7,10 @@ using UnityEngine;
 public class StateManager : MonoBehaviour
 {
     protected CompositeDisposable subscriptions = new CompositeDisposable();
-    public State currentState;
+    private State currentState;
     private void OnEnable()
     {
+        currentState=GetComponentInChildren<IdleState>();
         StartCoroutine(Subscribe());
     }
     private void OnDisable()

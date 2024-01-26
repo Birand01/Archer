@@ -28,15 +28,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHealable
             remainingSize = value;
         }
     }
-    private void OnEnable()
-    {
-        DamageZoneInteraction.OnTakeDamageFromPlayer += TakeDamage;
-    }
-    private void OnDisable()
-    {
-        DamageZoneInteraction.OnTakeDamageFromPlayer -= TakeDamage;
-
-    }
     protected  void Start()
     {
         remainingSize = totalSize;

@@ -20,8 +20,7 @@ public class AttackRadius : MonoBehaviour
     private void Awake()
     {
         damageables = new List<IDamageable>();
-        radius = this.gameObject.GetComponent<SphereCollider>().radius;
-        minDistanceToAttack = 3 * radius;
+        minDistanceToAttack = 2 * this.transform.localScale.x;
     }
     private void OnEnable()
     {

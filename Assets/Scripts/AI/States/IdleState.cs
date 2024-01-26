@@ -5,7 +5,7 @@ using UnityEngine;
 public class IdleState : State
 {
     private float startTime = 0f;
-    [SerializeField] private float maxWaitIdleTime;
+    internal float maxWaitIdleTime;
     [SerializeField] private ChaseState chaseState;
     public override State RunCurrentState()
     {

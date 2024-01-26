@@ -10,8 +10,8 @@ public class EnemyHealth : MonoBehaviour,IDamageable
 {
     [SerializeField] private GameObject goldPrefab;
     [SerializeField] private Image healthBar;
-    [SerializeField] internal float _health,goldGive;
-    [SerializeField] internal float takenDamage;
+    internal float _health,goldGive;
+    internal float takenDamage;
 
     /// <summary>
     /// EVENTS
@@ -19,8 +19,8 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     public static event Action<Collider> OnRemoveEnemyFromDamageableList;
     public static event Action<int> OnScoreCounterEvent;
     public static event Action<GameObject> OnGenerateGoldEvent;
-    public static event Action<float> OnEnemyGoldGiveEvent;
     // -----------------------------------------------------
+   
     public float Health
     {
         get { return _health; }

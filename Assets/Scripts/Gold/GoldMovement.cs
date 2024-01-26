@@ -37,7 +37,7 @@ public class GoldMovement : MonoBehaviour
     private IEnumerator MoveToPlayer()
     {
         yield return new WaitForSeconds(1f);
-        transform.DOMove(_player.position,1f).SetEase(Ease.OutQuad);
+        transform.DOMove(_player.position,0.5f).SetEase(Ease.OutQuad);
        
     }
     protected virtual IEnumerator Subscribe()

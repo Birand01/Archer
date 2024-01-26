@@ -6,7 +6,7 @@ using Zenject;
 public class EnemySpawnManager : MonoBehaviour
 {
     [Inject] ScoreManager scoreManager;
-    [SerializeField] private GameObject zombiePrefab;
+    [SerializeField] private List<GameObject> enemyList=new List<GameObject>();
     internal bool willSpawnTargets=true;
     private float SpawnInterval => 4f * Mathf.Pow(0.95f, 0.1f*scoreManager.totalScore);
 
@@ -30,15 +30,11 @@ public class EnemySpawnManager : MonoBehaviour
     }
     private IEnumerator SpawnTargetsCoroutine()
     {
-        // Wait a little bit after hitting the first target until we spawn the second one
         yield return new WaitForSeconds(1f);
 
         while (willSpawnTargets)
         {
-            GameObject spawnedTarget = Instantiate(zombiePrefab, GetRandomSpawnPosition(), Quaternion.identity);
-            //spawnedTarget.willAttack = true;
-            //ArcheryGame.NotifyTargetWasSpawned(spawnedTarget);
-
+            GameObject spawnedTarget = Instantiate(enemyList[Random.Range(0,enemyList.Count)], GetRandomSpawnPosition(), Quaternion.identity);
             yield return new WaitForSeconds(SpawnInterval);
         }
     }

@@ -6,7 +6,12 @@ public class EnemySO : ScriptableObject
 {
     public float goldGive;
     public float health;
-    public float attackValue;
+    public float attackValue;  
+    public float takenDamage;
+    public float waitIdleTime;
+    [Header("Navmesh Attributes")]
+    public float attackStoppingDistance;
+    public float angularSpeed;
+    public float acceleration;
     public float speed;
-
 }
