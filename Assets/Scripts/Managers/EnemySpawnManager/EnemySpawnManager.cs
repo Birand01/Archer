@@ -5,7 +5,7 @@ using Zenject;
 
 public class EnemySpawnManager : MonoBehaviour
 {
-    [Inject] ScoreManager scoreManager;
+    [Inject] KillCounterManager scoreManager;
     [SerializeField] private List<GameObject> enemyList=new List<GameObject>();
     internal bool willSpawnTargets=true;
     private float SpawnInterval => 4f * Mathf.Pow(0.95f, 0.1f*scoreManager.totalScore);

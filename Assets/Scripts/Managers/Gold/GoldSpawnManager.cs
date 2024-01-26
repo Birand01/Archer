@@ -7,16 +7,7 @@ using UnityEngine;
 public class GoldSpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject goldPrefab;
-    private void OnEnable()
-    {
-        EnemyHealth.OnGenerateGoldEvent += GenerateGold;
-    }
-    private void OnDisable()
-    {
-        EnemyHealth.OnGenerateGoldEvent -= GenerateGold;
-
-    }
-
+   
     private void GenerateGold(GameObject gameObject)
     {
         GameObject gold = Instantiate(goldPrefab);

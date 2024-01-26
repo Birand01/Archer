@@ -85,7 +85,6 @@
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\Scripts\Gravity.cs" />
     <Compile Include="Assets\Scripts\Gold\GoldMovement.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\Scripts\PlayerMachineDebug.cs" />
-    <Compile Include="Assets\Scripts\Managers\Score\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\AI\States\ChaseState.cs" />
     <Compile Include="Assets\Scripts\AI\States\DeadState.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\Warrior FREE\Code\WarriorAnimatorEvents.cs" />
@@ -114,6 +113,11 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCharacterController.cs" />
     <Compile Include="Assets\Scripts\Player\AttackRadiusInteraction.cs" />
+    <Compile Include="Assets\Scripts\Base\ButtonBase.cs" />
+    <Compile Include="Assets\Scripts\UI\SkillButtons\HealthButton\HealthButton.cs" />
+    <Compile Include="Assets\Scripts\Managers\Score\KillCounterManager.cs" />
+    <Compile Include="Assets\Scripts\UI\SkillButtons\TotalHealthButton\TotalHealthButton.cs" />
+    <Compile Include="Assets\Scripts\UI\SkillButtons\ArrowDamageButton\ArrowDamageButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

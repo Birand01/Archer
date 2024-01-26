@@ -8,6 +8,8 @@ TagManager:
   - StateParent
   - HealtbarParent
   - Fillbar
+  - PriceText
+  - SkillValueText
   layers:
   - Default
   - TransparentFX

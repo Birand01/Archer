@@ -12,7 +12,7 @@ using UnityEngine.UI;
 public class EnemyConfiguration : MonoBehaviour
 {
    
-    [SerializeField] private EnemySO enemySO;
+    [SerializeField] internal EnemySO enemySO;
     private LayerMask _layerMask;
   
     private void OnEnable()

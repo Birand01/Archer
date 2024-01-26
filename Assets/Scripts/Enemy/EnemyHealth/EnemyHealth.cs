@@ -18,13 +18,31 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     /// </summary>
     public static event Action<Collider> OnRemoveEnemyFromDamageableList;
     public static event Action<int> OnScoreCounterEvent;
-    public static event Action<GameObject> OnGenerateGoldEvent;
+    public static event Action OnPurchaseBoostArrowDamageEvent;
+
     // -----------------------------------------------------
    
+
     public float Health
     {
         get { return _health; }
         set { _health = value; }
+    }
+
+    private void OnEnable()
+    {
+        ArrowDamageButton.OnIncreaseArrowDamageEvent += OnIncreaseTakenDamageValue;
+    }
+    private void OnDisable()
+    {
+        ArrowDamageButton.OnIncreaseArrowDamageEvent -= OnIncreaseTakenDamageValue;
+
+    }
+
+    private void OnIncreaseTakenDamageValue(float value)
+    {
+        gameObject.GetComponent<EnemyConfiguration>().enemySO.takenDamage += value;
+        OnPurchaseBoostArrowDamageEvent?.Invoke();
     }
 
     public Transform GetTransform()
@@ -59,7 +77,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
         gameObject.GetComponent<Collider>().enabled = false;    
         yield return new WaitForSeconds(2f);
         this.gameObject.SetActive(false);
-        OnGenerateGoldEvent?.Invoke(gameObject);
+      
 
     }
     private IEnumerator GenerateGold()

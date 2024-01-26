@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArrowInteraction : InteractionBase
 {
-    [SerializeField] private float arrowDamage;
+  
     protected override void OnTriggerEnterAction(Collider collider)
     {
         this.gameObject.SetActive(false);

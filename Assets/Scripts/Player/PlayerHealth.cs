@@ -15,8 +15,15 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHealable
     [SerializeField] internal float totalSize;
     internal float remainingSize;
 
+    /// <summary>
+    /// EVENTS
+    /// </summary>
     public static event Action<bool> OnPlayerDeadEvent;
     public static event Action OnGameOverEvent;
+    public static event Action OnPurchaseBoostHealthEvent;
+    public static event Action OnPurchaseBoostTotalHealthEvent;
+    //----------------------------------------------------------------------------
+
     internal float Health
     {
         get
@@ -28,6 +35,17 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHealable
             remainingSize = value;
         }
     }
+    private void OnEnable()
+    {
+        TotalHealthButton.OnIncreseTotalHealthEvent += InceraseTotalHealthValue;
+        HealthButton.OnGainHealthEvent += GainHealth;
+    }
+    private void OnDisable()
+    {
+        HealthButton.OnGainHealthEvent -= GainHealth;
+        TotalHealthButton.OnIncreseTotalHealthEvent -= InceraseTotalHealthValue;
+
+    }
     protected  void Start()
     {
         remainingSize = totalSize;
@@ -38,20 +56,41 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHealable
     }
     private void InitializeHealthTexts()
     {
-        currentHealthText.text = Health.ToString();
-        maxHealthText.text = totalSize.ToString();
+        currentHealthText.text = String.Format("{0:0}", Health);
+        maxHealthText.text = String.Format("{0:0}", totalSize);
     }
     public void GainHealth(float value)
     {
         Health += value;
-        currentHealthText.text=Health.ToString();
-        Health = Mathf.Clamp(Health, 0, totalSize);
+        if (Health<totalSize)
+        {      
+            currentHealthText.text = String.Format("{0:0}", Health);
+            Health = Mathf.Clamp(Health, 0, totalSize);
+            SetHealthbarUI();
+            OnPurchaseBoostHealthEvent?.Invoke();
+        }
+        if(Health>=totalSize)
+        {
+            Health = totalSize;
+            currentHealthText.text = String.Format("{0:0}", Health);
+            Health = Mathf.Clamp(Health, 0, totalSize);
+            SetHealthbarUI();
+        }
+       
+    }
+
+    private void InceraseTotalHealthValue(float value)
+    {
+        totalSize += value;
+        maxHealthText.text = String.Format("{0:0}", totalSize);
+        SetHealthbarUI();
+        OnPurchaseBoostTotalHealthEvent?.Invoke();
     }
     public void TakeDamage(float damage)
     {
         Health -= damage;
         Health = Mathf.Clamp(Health, 0, totalSize);
-        currentHealthText.text = String.Format("{0:0}", Health);
+        currentHealthText.text = String.Format("{0:0}", Health); 
         if (Health <= 0)
         {
             OnGameOverEvent?.Invoke();

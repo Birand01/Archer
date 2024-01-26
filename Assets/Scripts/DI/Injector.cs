@@ -6,6 +6,7 @@ public class Injector : MonoInstaller
 {
     public override void InstallBindings()
     {
-        Container.Bind<ScoreManager>().FromComponentInHierarchy().AsSingle().NonLazy();
+        Container.Bind<KillCounterManager>().FromComponentInHierarchy().AsSingle().NonLazy();
+        Container.Bind<GoldCounterManager>().FromComponentInHierarchy().AsSingle().NonLazy();
     }
 }

@@ -396,6 +396,7 @@
 "Assets/Scripts/AI/States/WinState.cs"
 "Assets/Scripts/Arrow/Arrow.cs"
 "Assets/Scripts/Arrow/ArrowInteraction.cs"
+"Assets/Scripts/Base/ButtonBase.cs"
 "Assets/Scripts/Base/HealthBase.cs"
 "Assets/Scripts/Base/InteractionBase.cs"
 "Assets/Scripts/DI/Injector.cs"
@@ -409,7 +410,7 @@
 "Assets/Scripts/Managers/EnemySpawnManager/EnemySpawnManager.cs"
 "Assets/Scripts/Managers/Gold/GoldCounterManager.cs"
 "Assets/Scripts/Managers/Gold/GoldSpawnManager.cs"
-"Assets/Scripts/Managers/Score/ScoreManager.cs"
+"Assets/Scripts/Managers/Score/KillCounterManager.cs"
 "Assets/Scripts/Player/AttackRadius.cs"
 "Assets/Scripts/Player/AttackRadiusInteraction.cs"
 "Assets/Scripts/Player/DamageZoneInteraction.cs"
@@ -419,6 +420,9 @@
 "Assets/Scripts/Player/PlayerShoot.cs"
 "Assets/Scripts/SO/Enemy/EnemySO.cs"
 "Assets/Scripts/UI/EnemyHealthBar/HealthbarConfig.cs"
+"Assets/Scripts/UI/SkillButtons/ArrowDamageButton/ArrowDamageButton.cs"
+"Assets/Scripts/UI/SkillButtons/HealthButton/HealthButton.cs"
+"Assets/Scripts/UI/SkillButtons/TotalHealthButton/TotalHealthButton.cs"
 -langversion:9.0
 
 /deterministic
