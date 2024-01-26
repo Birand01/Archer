@@ -421,6 +421,7 @@
 "Assets/Scripts/SO/Enemy/EnemySO.cs"
 "Assets/Scripts/UI/EnemyHealthBar/HealthbarConfig.cs"
 "Assets/Scripts/UI/SkillButtons/ArrowDamageButton/ArrowDamageButton.cs"
+"Assets/Scripts/UI/SkillButtons/AttackRange/AttackRangeButton.cs"
 "Assets/Scripts/UI/SkillButtons/HealthButton/HealthButton.cs"
 "Assets/Scripts/UI/SkillButtons/TotalHealthButton/TotalHealthButton.cs"
 -langversion:9.0

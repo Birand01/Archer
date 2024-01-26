@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -7.3654, y: 0.51902}
-  m_SizeDelta: {x: 32.5757, y: 38.7}
+  m_SizeDelta: {x: 36.6716, y: 38.7}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &5881392540502498035
 CanvasRenderer:
@@ -599,7 +599,7 @@ MonoBehaviour:
   priceText: {fileID: 7118086803372646713}
   skillValueText: {fileID: 7014453823141855780}
   priceValue: 12.5
-  skillAmount: 0.1
+  skillAmount: 1
 --- !u!1 &8547582405090809535
 GameObject:
   m_ObjectHideFlags: 0
