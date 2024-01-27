@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\AI\States\DeadState.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\Warrior FREE\Code\WarriorAnimatorEvents.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\Warrior FREE\Code\WarriorInputController.cs" />
+    <Compile Include="Assets\Scripts\UI\SkillButtons\AttackRange\AttackRangeButton.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRotation.cs" />
     <Compile Include="Assets\Scripts\UI\SkillButtons\TotalHealthButton\TotalHealthButton.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\Warrior FREE\Code\WarriorTiming.cs" />
@@ -118,7 +119,6 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCharacterController.cs" />
     <Compile Include="Assets\Scripts\Player\AttackRadiusInteraction.cs" />
-    <Compile Include="Assets\Scripts\UI\SkillButtons\AttackRange\AttackRangeButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

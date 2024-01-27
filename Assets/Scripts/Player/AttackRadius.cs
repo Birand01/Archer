@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,18 +13,33 @@ public class AttackRadius : MonoBehaviour
 
     public static event Action<IDamageable> OnAttackEvent;
     public static event Action OnAttackAnimationEvent;
-    private float radius;
-    private void OnValidate()
-    {    
-      
-    }
+  
+   
     private void Awake()
     {
         damageables = new List<IDamageable>();
         minDistanceToAttack = 2 * this.transform.localScale.x;
     }
+
+    private void UpdateAttackRange(float range)
+    {
+        transform.DOScale(transform.localScale.x + range, 0.5f);
+        StartCoroutine(ColorCoroutine());
+        minDistanceToAttack+=2*range;
+    }
+    private IEnumerator ColorCoroutine()
+    {
+        this.gameObject.GetComponent<SpriteRenderer>().DOColor(Color.red, 0.5f);
+        yield return new WaitForSeconds(0.2f);
+        this.gameObject.GetComponent<SpriteRenderer>().DOColor(Color.white, 0.5f);
+
+    }
+
+
+
     private void OnEnable()
     {
+        AttackRangeButton.OnIncreaseAttackRangeEvent += UpdateAttackRange;
         PlayerHealth.OnPlayerDeadEvent += OnDeadEvent;
         EnemyHealth.OnRemoveEnemyFromDamageableList += RemoveEnemyFromDamageableList;
         AttackRadiusInteraction.OnAddEnemyToDamageableList += AddEnemyToDamageableList;
@@ -31,6 +47,7 @@ public class AttackRadius : MonoBehaviour
     }
     private void OnDisable()
     {
+        AttackRangeButton.OnIncreaseAttackRangeEvent -= UpdateAttackRange;
         AttackRadiusInteraction.OnAddEnemyToDamageableList -= AddEnemyToDamageableList;
         AttackRadiusInteraction.OnRemoveEnemyFromDamageableList -= RemoveEnemyFromDamageableList;
         EnemyHealth.OnRemoveEnemyFromDamageableList -= RemoveEnemyFromDamageableList;

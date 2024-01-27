@@ -3285,6 +3285,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 112303220}
     m_Modifications:
+    - target: {fileID: 3166167003599040086, guid: 19d0abd577714d04090f4b8997c5e5e2, type: 3}
+      propertyPath: skillAmount
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5169470399993835057, guid: 19d0abd577714d04090f4b8997c5e5e2, type: 3}
       propertyPath: m_Name
       value: AttackRangeButton

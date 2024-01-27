@@ -15,7 +15,7 @@ MonoBehaviour:
   goldGive: 1
   health: 2
   attackValue: 0.2
-  takenDamage: 0.5
+  takenDamage: 1
   waitIdleTime: 3
   attackStoppingDistance: 2.5
   angularSpeed: 720
