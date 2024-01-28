@@ -6,10 +6,15 @@ using Zenject;
 public class EnemySpawnManager : MonoBehaviour
 {
     [Inject] KillCounterManager scoreManager;
-    [SerializeField] private List<GameObject> enemyList=new List<GameObject>();
+    [SerializeField] private List<Zombie> monsterList=new List<Zombie>();
     internal bool willSpawnTargets=true;
     private float SpawnInterval => 4f * Mathf.Pow(0.95f, 0.1f*scoreManager.totalScore);
-
+    private double accumulatedWeights;
+    private System.Random rand=new System.Random();
+    private void Awake()
+    {
+        CalculateWeights();
+    }
     private void Start()
     {
         StartCoroutine(SpawnTargetsCoroutine());
@@ -34,8 +39,34 @@ public class EnemySpawnManager : MonoBehaviour
 
         while (willSpawnTargets)
         {
-            GameObject spawnedTarget = Instantiate(enemyList[Random.Range(0,enemyList.Count)], GetRandomSpawnPosition(), Quaternion.identity);
+            Zombie randomZombie = monsterList[GetRandomMonsterIndex()];
+            GameObject spawnedTarget = Instantiate(randomZombie.enemyPrefab);
+            spawnedTarget.transform.position=GetRandomSpawnPosition();
+            spawnedTarget.transform.rotation=Quaternion.identity;
             yield return new WaitForSeconds(SpawnInterval);
+        }
+    }
+    private int GetRandomMonsterIndex()
+    {
+        double r=rand.NextDouble()*accumulatedWeights;
+        for (int i = 0; i < monsterList.Count; i++)
+        {
+            if (monsterList[i]._weight>=r)
+            {
+                return i;
+            }
+        }
+        return 0;
+
+    }
+
+    private void CalculateWeights()
+    {
+        accumulatedWeights = 0f;
+        foreach (Zombie zombie in monsterList)
+        {
+            accumulatedWeights += zombie.spawnChance;
+            zombie._weight = accumulatedWeights;
         }
     }
 
@@ -53,4 +84,11 @@ public class EnemySpawnManager : MonoBehaviour
             Gizmos.DrawWireSphere(transform.GetChild(i).position, 1f);
         }
     }
+}
+[System.Serializable]
+public class Zombie
+{
+    public GameObject enemyPrefab;
+    [Range(0f, 100f)] public float spawnChance;
+    [HideInInspector] public double _weight;
 }

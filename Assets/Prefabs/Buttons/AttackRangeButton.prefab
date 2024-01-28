@@ -464,7 +464,7 @@ MonoBehaviour:
   priceText: {fileID: 5484531645245416558}
   skillValueText: {fileID: 5731999116042536819}
   priceValue: 10
-  skillAmount: 1
+  skillAmount: 0.1
 --- !u!1 &5731999116042536821
 GameObject:
   m_ObjectHideFlags: 0

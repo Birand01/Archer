@@ -78,6 +78,7 @@
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperMath.cs" />
     <Compile Include="Assets\Scripts\Player\DamageZoneInteraction.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\Scripts\PlayerInputController.cs" />
+    <Compile Include="Assets\Scripts\Camera\VirtualCamera.cs" />
     <Compile Include="Assets\Scripts\AI\State.cs" />
     <Compile Include="Assets\Scripts\DI\Injector.cs" />
     <Compile Include="Assets\Scripts\Managers\EnemySpawnManager\EnemySpawnManager.cs" />
@@ -119,7 +120,6 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCharacterController.cs" />
     <Compile Include="Assets\Scripts\Player\AttackRadiusInteraction.cs" />
-    <Compile Include="Assets\Scripts\Camera\VirtualCamera.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

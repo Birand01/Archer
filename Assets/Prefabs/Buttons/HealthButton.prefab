@@ -349,8 +349,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priceText: {fileID: 3530350515083642398}
   skillValueText: {fileID: 3706055383148782851}
-  priceValue: 2
-  skillAmount: 5
+  priceValue: 3.2
+  skillAmount: 10
 --- !u!1 &5075958660415334222
 GameObject:
   m_ObjectHideFlags: 0

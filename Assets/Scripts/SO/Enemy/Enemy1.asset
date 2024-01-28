@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19251b0d3b4f7c540ab01850c1d39c0c, type: 3}
   m_Name: Enemy1
   m_EditorClassIdentifier: 
-  goldGive: 0.2
+  goldGive: 1
   health: 1
   attackValue: 0.1
   takenDamage: 1

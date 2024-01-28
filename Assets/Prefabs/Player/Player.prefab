@@ -2907,7 +2907,7 @@ GameObject:
   - component: {fileID: 691868248}
   - component: {fileID: 691868247}
   m_Layer: 12
-  m_Name: Erika_Archer_Body_Mesh
+  m_Name: DamageZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3059,7 +3059,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.7
+  m_Radius: 2.36
   m_Center: {x: -0.0060001165, y: 0, z: -0.043193307}
 --- !u!114 &691868247
 MonoBehaviour:

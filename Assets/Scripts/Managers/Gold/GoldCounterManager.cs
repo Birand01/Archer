@@ -28,7 +28,7 @@ public class GoldCounterManager : MonoBehaviour
     {
         totalGoldAmount += value;
         totalGoldAmount=Mathf.Clamp(totalGoldAmount, 0f, float.MaxValue);
-        goldCounterText.text =string.Format("{0}", totalGoldAmount.ToString());
+        goldCounterText.text =string.Format("{0.0}", totalGoldAmount);
 
     }
 }
