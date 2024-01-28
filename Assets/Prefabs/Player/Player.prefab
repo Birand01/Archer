@@ -3175,4 +3175,4 @@ MonoBehaviour:
   shootPositions:
   - {fileID: 6725565492149068285}
   arrowPrefab: {fileID: 7315903515749474447, guid: 8dbad0dc6585ec642b076fa0395e6e9d, type: 3}
-  reloadDelay: 1.5
+  reloadDelay: 1.7

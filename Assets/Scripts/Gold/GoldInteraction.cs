@@ -7,12 +7,10 @@ public class GoldInteraction : InteractionBase
 {
     internal float goldGive;
     public static event Action<float> OnIncreaseGoldAmount;
-    private void OnEnable()
-    {
-        
-    }
+    public static event Action<SoundType, bool> OnGoldCollectSound;
     protected override void OnTriggerEnterAction(Collider collider)
     {
+        OnGoldCollectSound?.Invoke(SoundType.GoldCollectSound, true);
         OnIncreaseGoldAmount?.Invoke(goldGive);
         gameObject.SetActive(false);
     }
