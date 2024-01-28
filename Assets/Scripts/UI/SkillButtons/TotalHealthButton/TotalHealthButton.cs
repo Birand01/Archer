@@ -7,18 +7,10 @@ public class TotalHealthButton : ButtonBase
 {
     public static event Action<float> OnIncreseTotalHealthEvent;
 
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-        PlayerHealth.OnPurchaseBoostTotalHealthEvent += OnPurchaseSkillEvent;
-    }
-    protected override void OnDisable()
-    {
-        base.OnDisable();
-        PlayerHealth.OnPurchaseBoostTotalHealthEvent -= OnPurchaseSkillEvent;
-    }
+  
     protected override void OnButtonClickEvent()
     {
+        OnPurchaseSkillEvent();
         OnIncreseTotalHealthEvent?.Invoke(skillAmount);
     }
 }

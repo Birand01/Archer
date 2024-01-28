@@ -65,7 +65,7 @@ public abstract class ButtonBase : MonoBehaviour
     {
         goldCounterManager.GoldCounter(-priceValue);
     }
-    protected void IsButtonInteractable(bool state)
+    protected virtual void IsButtonInteractable(bool state)
     {
         button.interactable = state;
     }

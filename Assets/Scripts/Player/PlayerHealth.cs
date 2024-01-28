@@ -21,7 +21,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHealable
     public static event Action<bool> OnPlayerDeadEvent;
     public static event Action OnGameOverEvent;
     public static event Action OnPurchaseBoostHealthEvent;
-    public static event Action OnPurchaseBoostTotalHealthEvent;
     //----------------------------------------------------------------------------
 
     internal float Health
@@ -84,7 +83,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHealable
         totalSize += value;
         maxHealthText.text = String.Format("{0:0}", totalSize);
         SetHealthbarUI();
-        OnPurchaseBoostTotalHealthEvent?.Invoke();
+        //OnPurchaseBoostTotalHealthEvent?.Invoke();
     }
     public void TakeDamage(float damage)
     {

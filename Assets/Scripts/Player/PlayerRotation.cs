@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerRotation : MonoBehaviour
 {
-    [SerializeField] protected float turretRotationSpeed;
+    [SerializeField] protected float playerRotationSpeed;
     Vector3 finalLookDirection;
     private void OnEnable()
     {
@@ -20,7 +20,7 @@ public class PlayerRotation : MonoBehaviour
     public virtual void Aim(IDamageable damageable)
     {
 
-        var rotationSpeed = turretRotationSpeed * Time.deltaTime;
+        var rotationSpeed = playerRotationSpeed * Time.deltaTime;
         Vector3 direction = damageable.GetTransform().position - transform.position;
         direction.y = 0f;
         finalLookDirection = Vector3.Lerp(finalLookDirection, direction, rotationSpeed);
