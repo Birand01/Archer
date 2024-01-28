@@ -14,6 +14,7 @@ public abstract class ButtonBase : MonoBehaviour
     [SerializeField] protected float priceValue,skillAmount;
     protected CompositeDisposable subscriptions = new CompositeDisposable();
     protected Button button;
+  
     protected virtual void Awake()
     {
         priceText.text=priceValue.ToString();
@@ -34,7 +35,9 @@ public abstract class ButtonBase : MonoBehaviour
     private void Start()
     {
         button.onClick.AddListener(OnButtonClickEvent);
+     
     }
+  
     protected abstract void OnButtonClickEvent();
     protected virtual IEnumerator Subscribe()
     {
