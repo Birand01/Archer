@@ -19,9 +19,10 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     public static event Action<Collider> OnRemoveEnemyFromDamageableList;
     public static event Action<int> OnScoreCounterEvent;
     public static event Action OnPurchaseBoostArrowDamageEvent;
-   
+    public static event Action<ParticleType, Vector3> OnEnemyDeadParticle;
+
     // -----------------------------------------------------
-   
+
 
     public float Health
     {
@@ -75,7 +76,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     {
         OnRemoveEnemyFromDamageableList?.Invoke(this.GetComponent<Collider>());
         gameObject.GetComponent<Collider>().enabled = false;
-      
+        OnEnemyDeadParticle?.Invoke(ParticleType.EnemyDead, transform.position);
         yield return new WaitForSeconds(2f);
         this.gameObject.SetActive(false);
       

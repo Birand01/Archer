@@ -6,8 +6,6 @@ using UnityEngine;
 public class DamageZoneInteraction : InteractionBase
 {
    
-  
-
     protected override void OnTriggerStayAction(Collider other)
     {
        

@@ -8,6 +8,7 @@ public class HealthButton : ButtonBase
    
     public static event Action<float> OnGainHealthEvent;
     public static event Action<SoundType, bool> OnHealButtonSound;
+   
     protected override void OnEnable()
     {
         PlayerHealth.OnPurchaseBoostHealthEvent += OnPurchaseSkillEvent;
@@ -20,6 +21,7 @@ public class HealthButton : ButtonBase
     }
     protected override void OnButtonClickEvent()
     {
+       
         OnHealButtonSound?.Invoke(SoundType.HealSound, true);
         OnGainHealthEvent?.Invoke(skillAmount);
     }

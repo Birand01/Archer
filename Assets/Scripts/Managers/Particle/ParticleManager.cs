@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public enum ParticleType
 {
-    ArrowHit,EnemyDead
+    ArrowHit,EnemyDead,HealthBoost,TotalHealth,AttackRange,Gold
 }
 public class ParticleManager : MonoBehaviour
 {
@@ -21,14 +21,23 @@ public class ParticleManager : MonoBehaviour
 
     private void OnEnable()
     {
-        DeadState.OnEnemyDeadParticle += PlayParticle;
-        ArrowInteraction.OnArrowHitParticle += PlayParticle;      
+        GoldInteraction.OnGoldParticle += PlayParticle;
+        PlayerHealth.OnTotalHealthBoostParticle += PlayParticle;
+        PlayerHealth.OnHealthBoostParticle += PlayParticle;
+        EnemyHealth.OnEnemyDeadParticle += PlayParticle;
+        ArrowInteraction.OnArrowHitParticle += PlayParticle;   
+        AttackRadius.OnAttackRangeParticle += PlayParticle;
     }
 
     private void OnDisable()
     {
         ArrowInteraction.OnArrowHitParticle -= PlayParticle;
-        DeadState.OnEnemyDeadParticle -= PlayParticle;
+        EnemyHealth.OnEnemyDeadParticle -= PlayParticle;
+        PlayerHealth.OnHealthBoostParticle -= PlayParticle;
+        PlayerHealth.OnTotalHealthBoostParticle -= PlayParticle;
+        AttackRadius.OnAttackRangeParticle -= PlayParticle;
+        GoldInteraction.OnGoldParticle -= PlayParticle;
+
 
     }
     private void PlayParticle(ParticleType typeOfParticle, Vector3 _position)

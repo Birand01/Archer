@@ -431,6 +431,7 @@
 "Assets/Scripts/Managers/Particle/ParticleConfig.cs"
 "Assets/Scripts/Managers/Particle/ParticleManager.cs"
 "Assets/Scripts/Managers/Score/KillCounterManager.cs"
+"Assets/Scripts/Managers/UI/UIManager.cs"
 "Assets/Scripts/Player/AttackRadius.cs"
 "Assets/Scripts/Player/AttackRadiusInteraction.cs"
 "Assets/Scripts/Player/DamageZoneInteraction.cs"

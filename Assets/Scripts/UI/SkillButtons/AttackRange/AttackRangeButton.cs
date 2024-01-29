@@ -9,6 +9,7 @@ public class AttackRangeButton : ButtonBase
     [Inject] VirtualCamera _camera;
     public static event Action<float> OnIncreaseAttackRangeEvent;
     public static event Action<SoundType, bool> OnAttackRangeClickButtonSound;
+    
     protected override void OnButtonClickEvent()
     {
         OnPurchaseSkillEvent();

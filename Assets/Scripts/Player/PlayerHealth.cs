@@ -21,6 +21,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHealable
     public static event Action<bool> OnPlayerDeadEvent;
     public static event Action OnGameOverEvent;
     public static event Action OnPurchaseBoostHealthEvent;
+    public static event Action<ParticleType, Vector3> OnHealthBoostParticle;
+    public static event Action<ParticleType, Vector3> OnTotalHealthBoostParticle;
     //----------------------------------------------------------------------------
 
     internal float Health
@@ -62,11 +64,13 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHealable
     {
         Health += value;
         if (Health<totalSize)
-        {      
+        {
+            OnHealthBoostParticle?.Invoke(ParticleType.HealthBoost, transform.position);
             currentHealthText.text = String.Format("{0:0}", Health);
             Health = Mathf.Clamp(Health, 0, totalSize);
             SetHealthbarUI();
             OnPurchaseBoostHealthEvent?.Invoke();
+           
         }
         if(Health>=totalSize)
         {
@@ -81,9 +85,10 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHealable
     private void InceraseTotalHealthValue(float value)
     {
         totalSize += value;
+        OnTotalHealthBoostParticle?.Invoke(ParticleType.TotalHealth,transform.position);
         maxHealthText.text = String.Format("{0:0}", totalSize);
         SetHealthbarUI();
-        //OnPurchaseBoostTotalHealthEvent?.Invoke();
+      
     }
     public void TakeDamage(float damage)
     {
@@ -92,6 +97,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable, IHealable
         currentHealthText.text = String.Format("{0:0}", Health); 
         if (Health <= 0)
         {
+          
             OnGameOverEvent?.Invoke();
             OnPlayerDeadEvent?.Invoke(true);
         }
