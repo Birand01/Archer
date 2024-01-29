@@ -9,5 +9,6 @@ public class Injector : MonoInstaller
         Container.Bind<KillCounterManager>().FromComponentInHierarchy().AsSingle().NonLazy();
         Container.Bind<GoldCounterManager>().FromComponentInHierarchy().AsSingle().NonLazy();
         Container.Bind<VirtualCamera>().FromComponentInHierarchy().AsSingle().NonLazy();
+        Container.Bind<PlayerHealth>().FromComponentInHierarchy().AsSingle().NonLazy();
     }
 }

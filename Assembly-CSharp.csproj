@@ -89,6 +89,7 @@
     <Compile Include="Assets\Art\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\Scripts\Managers\Gold\GoldCounterManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Managers\Particle\ParticleConfig.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyConfiguration.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\Warrior FREE\Code\WarriorController.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\Scripts\Gravity.cs" />
@@ -106,9 +107,11 @@
     <Compile Include="Assets\Art\ExplosiveLLC\Warrior FREE\Code\IKHands.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\Scripts\PlayerMachine.cs" />
     <Compile Include="Assets\Scripts\SO\Enemy\EnemySO.cs" />
+    <Compile Include="Assets\Scripts\SO\Particle\ParticleSO.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\Demo Elements\Code\CameraController.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCollisionType.cs" />
     <Compile Include="Assets\Scripts\Player\AttackRadius.cs" />
+    <Compile Include="Assets\Scripts\Managers\Particle\ParticleManager.cs" />
     <Compile Include="Assets\Scripts\Gold\GoldInteraction.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BSPTree.cs" />
     <Compile Include="Assets\Scripts\AI\States\IdleState.cs" />
@@ -116,6 +119,7 @@
     <Compile Include="Assets\Art\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\Scripts\UI\EnemyHealthBar\HealthbarConfig.cs" />
     <Compile Include="Assets\Scripts\AI\StateManager.cs" />
+    <Compile Include="Assets\Scripts\SO\Audio\AudioSO.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCollider.cs" />
     <Compile Include="Assets\Art\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\Warrior FREE\Code\WarriorData.cs" />
@@ -124,14 +128,13 @@
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\Scripts\PlayerCamera.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\DebugDraw.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BruteForceMesh.cs" />
+    <Compile Include="Assets\Scripts\Managers\Audio\AudioManager.cs" />
     <Compile Include="Assets\Art\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Art\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\Art\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCharacterController.cs" />
     <Compile Include="Assets\Scripts\Player\AttackRadiusInteraction.cs" />
-    <Compile Include="Assets\Scripts\Managers\Audio\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\SO\Audio\AudioSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -894,9 +897,25 @@
       <Project>{0362AD2D-ED31-2EE5-8C33-D611E5AA57AD}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{1FB1BA9C-A032-1217-9153-464ECE094E81}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{AD1050D7-4122-215F-D5E6-F10D848C2F09}</Project>
+      <Name>KinoBloom.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{600F4B95-EA9C-E656-9AD5-B166E482E6E5}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Zenject-Editor.csproj">
       <Project>{019F41D2-6533-913F-6EAF-06A64EFF3E79}</Project>
       <Name>Zenject-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{005E27A8-49A7-9C28-03FE-1F30911A9FC3}</Project>
+      <Name>CFXRDemo</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
       <Project>{38CA5E83-B971-F845-1F79-4FAA277D976D}</Project>
@@ -914,29 +933,13 @@
       <Project>{FDC123E3-71E2-9882-CEEA-B17E53249832}</Project>
       <Name>Zenject</Name>
     </ProjectReference>
-    <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{7F405072-6E8B-DEDB-E6DD-61B5C02B2238}</Project>
-      <Name>CFXRRuntime</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXREditor.csproj">
-      <Project>{600F4B95-EA9C-E656-9AD5-B166E482E6E5}</Project>
-      <Name>CFXREditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
-      <Project>{1FB1BA9C-A032-1217-9153-464ECE094E81}</Project>
-      <Name>ToonyColorsPro.Demo.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXRDemo.csproj">
-      <Project>{005E27A8-49A7-9C28-03FE-1F30911A9FC3}</Project>
-      <Name>CFXRDemo</Name>
-    </ProjectReference>
-    <ProjectReference Include="KinoBloom.Runtime.csproj">
-      <Project>{AD1050D7-4122-215F-D5E6-F10D848C2F09}</Project>
-      <Name>KinoBloom.Runtime</Name>
-    </ProjectReference>
     <ProjectReference Include="CFXR.WelcomeScreen.csproj">
       <Project>{8063C775-FBAC-A489-A688-05ADBB7140E7}</Project>
       <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{7F405072-6E8B-DEDB-E6DD-61B5C02B2238}</Project>
+      <Name>CFXRRuntime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

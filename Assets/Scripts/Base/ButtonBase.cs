@@ -9,6 +9,7 @@ using TMPro;
 
 public abstract class ButtonBase : MonoBehaviour
 {
+    [Inject] protected PlayerHealth playerHealth;
     [Inject] protected GoldCounterManager goldCounterManager;
     [SerializeField] protected TMP_Text priceText,skillValueText;
     [SerializeField] protected float priceValue,skillAmount;
@@ -53,7 +54,8 @@ public abstract class ButtonBase : MonoBehaviour
 
     protected virtual void ButtonInteractability()
     {
-        if (goldCounterManager.totalGoldAmount <= 0 || float.Parse(priceText.text)>goldCounterManager.totalGoldAmount)
+        if (goldCounterManager.totalGoldAmount <= 0 || float.Parse(priceText.text)>goldCounterManager.totalGoldAmount
+            || playerHealth.Health<=0)
         {
             IsButtonInteractable(false);
         }

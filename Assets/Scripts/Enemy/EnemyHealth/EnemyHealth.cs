@@ -19,7 +19,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     public static event Action<Collider> OnRemoveEnemyFromDamageableList;
     public static event Action<int> OnScoreCounterEvent;
     public static event Action OnPurchaseBoostArrowDamageEvent;
-
+   
     // -----------------------------------------------------
    
 
@@ -74,7 +74,8 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     private IEnumerator DeadEventCoroutine()
     {
         OnRemoveEnemyFromDamageableList?.Invoke(this.GetComponent<Collider>());
-        gameObject.GetComponent<Collider>().enabled = false;    
+        gameObject.GetComponent<Collider>().enabled = false;
+      
         yield return new WaitForSeconds(2f);
         this.gameObject.SetActive(false);
       

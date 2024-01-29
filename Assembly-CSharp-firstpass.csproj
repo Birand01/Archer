@@ -791,9 +791,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{1FB1BA9C-A032-1217-9153-464ECE094E81}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{AD1050D7-4122-215F-D5E6-F10D848C2F09}</Project>
+      <Name>KinoBloom.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{600F4B95-EA9C-E656-9AD5-B166E482E6E5}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Zenject-Editor.csproj">
       <Project>{019F41D2-6533-913F-6EAF-06A64EFF3E79}</Project>
       <Name>Zenject-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{005E27A8-49A7-9C28-03FE-1F30911A9FC3}</Project>
+      <Name>CFXRDemo</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
       <Project>{38CA5E83-B971-F845-1F79-4FAA277D976D}</Project>
@@ -811,29 +827,13 @@
       <Project>{FDC123E3-71E2-9882-CEEA-B17E53249832}</Project>
       <Name>Zenject</Name>
     </ProjectReference>
-    <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{7F405072-6E8B-DEDB-E6DD-61B5C02B2238}</Project>
-      <Name>CFXRRuntime</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXREditor.csproj">
-      <Project>{600F4B95-EA9C-E656-9AD5-B166E482E6E5}</Project>
-      <Name>CFXREditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
-      <Project>{1FB1BA9C-A032-1217-9153-464ECE094E81}</Project>
-      <Name>ToonyColorsPro.Demo.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXRDemo.csproj">
-      <Project>{005E27A8-49A7-9C28-03FE-1F30911A9FC3}</Project>
-      <Name>CFXRDemo</Name>
-    </ProjectReference>
-    <ProjectReference Include="KinoBloom.Runtime.csproj">
-      <Project>{AD1050D7-4122-215F-D5E6-F10D848C2F09}</Project>
-      <Name>KinoBloom.Runtime</Name>
-    </ProjectReference>
     <ProjectReference Include="CFXR.WelcomeScreen.csproj">
       <Project>{8063C775-FBAC-A489-A688-05ADBB7140E7}</Project>
       <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{7F405072-6E8B-DEDB-E6DD-61B5C02B2238}</Project>
+      <Name>CFXRRuntime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

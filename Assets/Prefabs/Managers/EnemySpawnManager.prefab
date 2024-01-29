@@ -90,10 +90,10 @@ MonoBehaviour:
     spawnChance: 100
     _weight: 0
   - enemyPrefab: {fileID: 5005254118598382538, guid: 0714e1aa82139724c8853dfb09dc1670, type: 3}
-    spawnChance: 40.8
+    spawnChance: 100
     _weight: 0
   - enemyPrefab: {fileID: 2019627767359379270, guid: 5b37846543692584e9aad2e05faf0b8f, type: 3}
-    spawnChance: 6.8
+    spawnChance: 100
     _weight: 0
 --- !u!1 &3235402869584137466
 GameObject:

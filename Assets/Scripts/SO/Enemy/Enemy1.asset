@@ -18,6 +18,6 @@ MonoBehaviour:
   takenDamage: 1
   waitIdleTime: 0.5
   attackStoppingDistance: 2.5
-  angularSpeed: 180
-  acceleration: 8
+  angularSpeed: 720
+  acceleration: 16
   speed: 5
