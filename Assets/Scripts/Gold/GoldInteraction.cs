@@ -11,9 +11,10 @@ public class GoldInteraction : InteractionBase
     public static event Action<ParticleType, Vector3> OnGoldParticle;
     protected override void OnTriggerEnterAction(Collider collider)
     {
+        this.gameObject.SetActive(false);
         OnGoldParticle?.Invoke(ParticleType.Gold,collider.transform.position);
         OnGoldCollectSound?.Invoke(SoundType.GoldCollectSound, true);
         OnIncreaseGoldAmount?.Invoke(goldGive);
-        gameObject.SetActive(false);
+       
     }
 }

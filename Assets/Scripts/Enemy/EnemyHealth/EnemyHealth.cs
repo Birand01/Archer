@@ -76,23 +76,20 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     {
         OnRemoveEnemyFromDamageableList?.Invoke(this.GetComponent<Collider>());
         gameObject.GetComponent<Collider>().enabled = false;
-        OnEnemyDeadParticle?.Invoke(ParticleType.EnemyDead, transform.position);
+        OnEnemyDeadParticle?.Invoke(ParticleType.EnemyDead, transform.position);      
         yield return new WaitForSeconds(2f);
         this.gameObject.SetActive(false);
-      
-
     }
     private IEnumerator GenerateGold()
     {
         yield return new WaitForSeconds(1);
-        GameObject gold = Instantiate(goldPrefab);
-        gold.gameObject.GetComponent<GoldInteraction>().goldGive = goldGive;
-        gold.transform.SetParent(null);
-        gold.transform.DOJump(new Vector3(transform.position.x, 0.6f, transform.position.z), 2, 1, 0.5f)
-            .SetEase(Ease.InSine);
+        GameObject gold =Instantiate(goldPrefab);
         gold.transform.position = transform.position;
         gold.transform.rotation = Quaternion.Euler(90, 0, 0);
-
+        gold.gameObject.GetComponent<GoldInteraction>().goldGive = goldGive;
+        gold.transform.DOJump(new Vector3(transform.position.x, 0.6f, transform.position.z), 2, 1, 0.5f)
+            .SetEase(Ease.InSine);
+        
     }
 
 }

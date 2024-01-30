@@ -4,10 +4,12 @@ using UniRx;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Zenject;
 using Zenject.SpaceFighter;
 
 public class PlayerShoot : MonoBehaviour
 {
+
     private CompositeDisposable _disposable = new CompositeDisposable();
     [SerializeField] protected List<Transform> shootPositions;
     [SerializeField] protected GameObject arrowPrefab;
@@ -62,7 +64,7 @@ public class PlayerShoot : MonoBehaviour
             foreach (var barrel in shootPositions)
             {
                 GameObject arrow = Instantiate(arrowPrefab);
-                arrow.transform.position =new Vector3(barrel.position.x, barrel.position.y+0.3f, barrel.position.z);
+                arrow.transform.position = new Vector3(barrel.position.x, barrel.position.y + 0.3f, barrel.position.z);
                 arrow.transform.rotation = Quaternion.LookRotation(damageable.GetTransform().position);
                 //arrow.GetComponent<Arrow>().Aim(damageable);
                 arrow.GetComponent<Arrow>().InitializeArrow(damageable);

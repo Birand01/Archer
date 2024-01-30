@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldCounterText: {fileID: 0}
-  totalGoldAmount: 30
+  totalGoldAmount: 100
